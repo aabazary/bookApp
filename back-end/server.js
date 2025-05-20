@@ -16,8 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
-// Routes
-app.use(routes);
+
 
 // Serve React app in production
 if (process.env.NODE_ENV === 'production') {
@@ -28,6 +27,9 @@ if (process.env.NODE_ENV === 'production') {
 });
 }
 
+
+// Routes
+app.use(routes);
 
 // Start server
 const startServer = async () => {
